@@ -18,12 +18,16 @@
         <h1>Hacker Escape Rooms</h1>
       </div>
 
-      <div class="menu-icon" id="menu-icon">
-        ☰
+      <!-- Hamburger + Close Icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="close-icon" id="closeIcon">✕</div>
       </div>
     </div>
 
-    <nav class="main-nav" id="main-nav">
+    <nav class="main-nav" id="mainNav">
       <ul>
         <li><a href="#">Play online</a></li>
         <li><a href="#">Play on-site</a></li>
@@ -69,7 +73,10 @@
       <img src="assets/img/room1.jpg" alt="Room 1" />
       <div class="card-content">
         <h3>Title of room (on-site)</h3>
-        <p class="stars">⭐⭐⭐⭐☆ <span>2–6 participants</span></p>
+        <div class="rating">
+          ⭐⭐⭐⭐☆
+          <span>2–6 participants</span>
+        </div>
         <p>Praeterea ex culpa non invenies unum aut non accusamus uno aut non, inminet.</p>
         <button>Book this room</button>
       </div>
@@ -79,7 +86,10 @@
       <img src="assets/img/room1.jpg" alt="Room 2" />
       <div class="card-content">
         <h3>Title of room (on-site)</h3>
-        <p class="stars">⭐⭐⭐⭐☆ <span>2–6 participants</span></p>
+        <div class="rating">
+          ⭐⭐⭐⭐☆
+          <span>2–6 participants</span>
+        </div>
         <p>Praeterea ex culpa non invenies unum aut non accusamus uno aut non, inminet.</p>
         <button>Book this room</button>
       </div>
@@ -89,7 +99,10 @@
       <img src="assets/img/room1.jpg" alt="Room 3" />
       <div class="card-content">
         <h3>Title of room (on-site)</h3>
-        <p class="stars">⭐⭐⭐⭐☆ <span>2–6 participants</span></p>
+        <div class="rating">
+          ⭐⭐⭐⭐☆
+          <span>2–6 participants</span>
+        </div>
         <p>Praeterea ex culpa non invenies unum aut non accusamus uno aut non, inminet.</p>
         <button>Book this room</button>
       </div>
@@ -150,14 +163,20 @@
     </div>
   </footer>
 
+  <!-- SCRIPT -->
   <script>
-    const menuIcon = document.getElementById('menu-icon');
-    const nav = document.getElementById('main-nav');
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('mainNav');
+    const closeIcon = document.getElementById('closeIcon');
 
-    menuIcon.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      menuIcon.textContent = nav.classList.contains('active') ? '✖' : '☰';
-    });
+    function toggleMenu() {
+      nav.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    closeIcon.addEventListener('click', toggleMenu);
   </script>
+
 </body>
 </html>

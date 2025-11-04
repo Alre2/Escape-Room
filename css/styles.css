@@ -273,3 +273,17 @@ footer {
     font-size: 1.4rem;
   }
 }
+/* CLOSE ICON (MOBILMENY) */
+.close-icon {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.hamburger.active .close-icon {
+  display: block;
+}
