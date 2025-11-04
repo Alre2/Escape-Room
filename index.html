@@ -1,139 +1,128 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hacker Escape Rooms</title>
-  <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;400italic&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header>
-    <div class="header-top">
-      <div class="header-left">
-        <img src="assets/img/logo.png" alt="ESC logo" class="logo" />
+    <div class="top-bar">
+      <div class="logo-section">
+        <img src="assets/img/logo.png" alt="ESC logo" class="logo">
         <h1>Hacker Escape Rooms</h1>
       </div>
-    </div>
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#">Play online</a></li>
-        <li><a href="#">Play on-site</a></li>
-        <li><a href="#">The story</a></li>
-        <li><a href="#">Contact us</a></li>
-      </ul>
-    </nav>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="#">Play online</a>
+        <a href="#">Play on-site</a>
+        <a href="#">The story</a>
+        <a href="#">Contact us</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO SECTION -->
   <section class="hero">
-    <img src="assets/img/hero.jpg" alt="Hero image" />
-    <div class="hero-buttons">
-      <button class="btn-primary">Online challenges</button>
-      <button class="btn-secondary">On-site challenges</button>
+    <img src="assets/img/hero.jpg" alt="Hacker" class="hero-img">
+    <div class="buttons">
+      <button class="btn red">Online challenges</button>
+      <button class="btn blue">On-site challenges</button>
     </div>
   </section>
 
-  <!-- Testimonials -->
+  <!-- TESTIMONIALS -->
   <section class="testimonials">
     <div class="testimonial">
-      <img src="assets/img/user1.jpg" alt="User" />
-      <div class="testimonial-text">
-        <p><em>This is a quote about how amazing this place is and how much fun me and my friends had when we tried it.</em></p>
-        <p><strong>John Doe</strong>, visited us in September 2021</p>
-      </div>
+      <img src="assets/img/user1.jpg" alt="User photo">
+      <p><em>This is a quote about how amazing this place is and how much fun me and my friends had when we tried it.</em></p>
+      <p><strong>John Doe</strong>, visited us in September 2021</p>
     </div>
 
     <div class="testimonial">
-      <img src="assets/img/user1.jpg" alt="User" />
-      <div class="testimonial-text">
-        <p><em>This is a quote about how amazing this place is and how much fun me and my friends had when we tried it.</em></p>
-        <p><strong>John Doe</strong>, visited us in September 2021</p>
+      <img src="assets/img/user1.jpg" alt="User photo">
+      <p><em>This is a quote about how amazing this place is and how much fun me and my friends had when we tried it.</em></p>
+      <p><strong>John Doe</strong>, visited us in September 2021</p>
+    </div>
+  </section>
+
+  <!-- POPULAR CHALLENGES -->
+  <section class="popular">
+    <h2>Popular challenges right now</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="assets/img/room1.jpg" alt="Room 1">
+        <div class="card-content">
+          <h3>Title of room (on-site)</h3>
+          <div class="rating">
+            <span class="stars">⭐⭐⭐⭐☆</span>
+            <span class="participants">2–6 participants</span>
+          </div>
+          <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam.</p>
+          <button class="book-btn">Book this room</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/room1.jpg" alt="Room 2">
+        <div class="card-content">
+          <h3>Title of room (on-site)</h3>
+          <div class="rating">
+            <span class="stars">⭐⭐⭐⭐☆</span>
+            <span class="participants">2–6 participants</span>
+          </div>
+          <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam.</p>
+          <button class="book-btn">Book this room</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/room1.jpg" alt="Room 3">
+        <div class="card-content">
+          <h3>Title of room (on-site)</h3>
+          <div class="rating">
+            <span class="stars">⭐⭐⭐⭐☆</span>
+            <span class="participants">2–6 participants</span>
+          </div>
+          <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam.</p>
+          <button class="book-btn">Book this room</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Popular challenges -->
-  <h2 class="section-title">Popular challenges right now</h2>
-
-  <section class="cards">
-    <div class="card">
-      <img src="assets/img/room1.jpg" alt="Room 1" />
-      <div class="card-content">
-        <h3>Title of room (on-site)</h3>
-        <p>Praeterea ex culpa non invenies unum aut non accusamus uno aut non, inminet.</p>
-        <button>Book this room</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/img/room1.jpg" alt="Room 2" />
-      <div class="card-content">
-        <h3>Title of room (on-site)</h3>
-        <p>Praeterea ex culpa non invenies unum aut non accusamus uno aut non, inminet.</p>
-        <button>Book this room</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/img/room1.jpg" alt="Room 3" />
-      <div class="card-content">
-        <h3>Title of room (on-site)</h3>
-        <p>Praeterea ex culpa non invenies unum aut non accusamus uno aut non, inminet.</p>
-        <button>Book this room</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Dark section -->
-  <section class="dark-section">
-    <p>Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec quoque vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
+  <!-- STORY SECTION -->
+  <section class="story">
+    <p>Quodsi haberent magnalia inter potentiam et divitias, ex quo illae quoque hoc ipsum voluptatem.</p>
     <button class="btn-outline">Read the full story</button>
   </section>
 
-  <!-- Two-column section -->
-  <section class="two-columns">
-    <div class="col">
-      <img src="assets/img/team1.jpg" alt="Teamwork" />
-      <h3>Play with your friends or build your team stronger at work</h3>
-      <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et.</p>
-      <button class="btn-primary">Book on-site today</button>
-    </div>
-
-    <div class="col">
-      <img src="assets/img/team2.jpg" alt="Online play" />
-      <h3>Play online or visit our venue for one of our 25 escape rooms</h3>
-      <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et.</p>
-      <button class="btn-primary">See all challenges</button>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-container">
-      <div class="footer-column">
-        <h3>[esc] Hacker Escape Rooms</h3>
+      <div class="footer-left">
+        <h4>[Esc] Hacker Escape Rooms</h4>
         <p>Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec quoque vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
       </div>
 
-      <div class="footer-column">
-        <h3>Site map</h3>
+      <div class="footer-middle">
+        <h4>Site map</h4>
         <ul>
           <li><a href="#">The Story</a></li>
           <li><a href="#">Contact Us</a></li>
           <li><a href="#">Legal</a></li>
-          <br>
           <li><a href="#">Play online</a></li>
           <li><a href="#">Play on-site</a></li>
         </ul>
       </div>
 
-      <div class="footer-column">
-        <h3>Follow us on</h3>
+      <div class="footer-right">
+        <h4>Follow us on</h4>
         <ul>
           <li><a href="#">Facebook</a></li>
           <li><a href="#">Instagram</a></li>
@@ -142,6 +131,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- JS MENU -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('main-nav');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      toggle.textContent = nav.classList.contains('open') ? '✖' : '☰';
+    });
+  </script>
 
 </body>
 </html>
