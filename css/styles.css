@@ -47,7 +47,7 @@ header {
   text-decoration: underline;
 }
 
-/* HAMBURGER BUTTON */
+/* HAMBURGER */
 .menu-toggle {
   display: none;
   background: none;
@@ -97,6 +97,36 @@ header {
   color: #011827;
 }
 
+/* TEAM */
+.team {
+  padding: 3rem 2rem;
+}
+
+.team-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.team-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.team-img {
+  width: 40%;
+  border-radius: 8px;
+}
+
+.team-text {
+  width: 45%;
+}
+
+.team-text h2 {
+  margin-bottom: 1rem;
+}
+
 /* TESTIMONIALS */
 .testimonials {
   display: flex;
@@ -119,7 +149,7 @@ header {
   vertical-align: middle;
 }
 
-/* POPULAR CARDS */
+/* POPULAR */
 .popular {
   text-align: center;
   margin: 3rem 0;
@@ -144,7 +174,6 @@ header {
 
 .card img {
   width: 100%;
-  height: auto;
 }
 
 .card-content {
@@ -249,6 +278,19 @@ footer {
 
   .menu-toggle {
     display: block;
+  }
+
+  .team-container {
+    flex-direction: column;
+  }
+
+  .team-container.reverse {
+    flex-direction: column;
+  }
+
+  .team-img, .team-text {
+    width: 100%;
+    text-align: center;
   }
 
   .cards {

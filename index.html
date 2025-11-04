@@ -33,6 +33,25 @@
     </div>
   </section>
 
+  <!-- TEAM SECTION -->
+  <section class="team">
+    <div class="team-container">
+      <img src="assets/img/team1.jpg" alt="Team image" class="team-img">
+      <div class="team-text">
+        <h2>Play with your friends or build your team stronger at work</h2>
+        <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et.</p>
+      </div>
+    </div>
+
+    <div class="team-container reverse">
+      <div class="team-text">
+        <h2>Play online or visit our venue for one of our 25 escape rooms</h2>
+        <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et.</p>
+      </div>
+      <img src="assets/img/team2.jpg" alt="Team image 2" class="team-img">
+    </div>
+  </section>
+
   <!-- TESTIMONIALS -->
   <section class="testimonials">
     <div class="testimonial">
@@ -52,7 +71,7 @@
     <h2>Popular challenges right now</h2>
     <div class="cards">
       <div class="card">
-        <img src="assets/img/room1.jpg" alt="Room">
+        <img src="assets/img/room1.jpg" alt="Room 1">
         <div class="card-content">
           <h3>Title of room (on-site)</h3>
           <div class="rating">
@@ -65,7 +84,7 @@
       </div>
 
       <div class="card">
-        <img src="assets/img/room1.jpg" alt="Room">
+        <img src="assets/img/room1.jpg" alt="Room 2">
         <div class="card-content">
           <h3>Title of room (on-site)</h3>
           <div class="rating">
@@ -78,7 +97,7 @@
       </div>
 
       <div class="card">
-        <img src="assets/img/room1.jpg" alt="Room">
+        <img src="assets/img/room1.jpg" alt="Room 3">
         <div class="card-content">
           <h3>Title of room (on-site)</h3>
           <div class="rating">
@@ -130,7 +149,6 @@
   <script>
     const toggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('main-nav');
-
     toggle.addEventListener('click', () => {
       nav.classList.toggle('open');
       toggle.innerHTML = nav.classList.contains('open') ? '&times;' : '&#9776;';
