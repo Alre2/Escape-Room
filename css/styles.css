@@ -25,7 +25,7 @@ header {
 
 .header-top {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 0 6%;
 }
@@ -46,13 +46,11 @@ header {
   margin: 0;
 }
 
-.menu-icon {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
+/* Meny under headern */
+.main-nav {
+  margin-top: 0.8rem;
 }
 
-/* Meny */
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -66,6 +64,7 @@ header {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  transition: opacity 0.2s;
 }
 
 .main-nav a:hover {
@@ -147,6 +146,14 @@ header {
   border-radius: 50%;
 }
 
+.testimonial-text {
+  text-align: left;
+}
+
+.testimonial-text p {
+  margin: 0.2rem 0;
+}
+
 /* Popular challenges */
 h2.section-title {
   text-align: center;
@@ -168,6 +175,7 @@ h2.section-title {
   width: 300px;
   overflow: hidden;
   background-color: white;
+  text-align: left;
 }
 
 .card img {
@@ -180,16 +188,25 @@ h2.section-title {
   padding: 1rem;
 }
 
-.card-content .stars {
-  color: #E3170A;
-  font-size: 0.9rem;
-  margin: 0.3rem 0;
+.card-content h3 {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
 }
 
-.card-content .stars span {
-  color: var(--dark-blue);
-  font-weight: 500;
-  margin-left: 5px;
+.card-content .stars {
+  color: #FFD700;
+  margin-right: 10px;
+}
+
+.card-content .participants {
+  float: right;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.card-content p {
+  clear: both;
+  margin-top: 0.8rem;
 }
 
 .card-content button {
@@ -210,6 +227,13 @@ h2.section-title {
   padding: 4rem 2rem;
 }
 
+.dark-section p {
+  max-width: 850px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 /* Two-column section */
 .two-columns {
   display: flex;
@@ -217,6 +241,11 @@ h2.section-title {
   justify-content: center;
   gap: 3rem;
   padding: 4rem 2rem;
+}
+
+.col {
+  flex: 1 1 400px;
+  max-width: 500px;
 }
 
 .col img {
@@ -240,39 +269,43 @@ footer {
   gap: 3rem;
 }
 
-/* RESPONSIV MOBILMENY */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-    color: white;
-  }
-
-  .main-nav {
-    display: none;
-    background-color: rgba(0,0,0,0.95);
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 70%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .main-nav.active {
-    display: flex;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .main-nav a {
-    font-size: 1.4rem;
-  }
+.footer-column {
+  flex: 1;
+  min-width: 250px;
 }
+
+.footer-column h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer-column p {
+  color: #d3d3d3;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  color: #d3d3d3;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-column a:hover {
+  color: var(--light-blue);
+}
+
 /* ====== MOBILMENY ====== */
 .hamburger {
   display: none;
@@ -304,13 +337,10 @@ footer {
   font-size: 28px;
   color: white;
   cursor: pointer;
+  z-index: 1002;
 }
 
-.hamburger.active .close-icon {
-  display: block;
-}
-
-/* Mobilmeny aktiverad */
+/* Menyn aktiv */
 .main-nav.open {
   display: flex !important;
   flex-direction: column;
@@ -342,5 +372,31 @@ footer {
   }
   .main-nav {
     display: none;
+  }
+  .main-nav.open + .close-icon {
+    display: block;
+  }
+  .testimonials {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    bottom: 20px;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .two-columns {
+    flex-direction: column;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
   }
 }
