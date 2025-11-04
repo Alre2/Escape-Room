@@ -9,29 +9,31 @@ body {
 header {
   background-color: #011827;
   color: white;
-  padding: 1rem 0;
-}
-
-.top-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
+  padding-bottom: 1rem;
+  position: relative;
 }
 
-.logo-section {
+.logo-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  position: relative;
 }
 
 .logo {
   height: 45px;
+  margin-right: 10px;
+}
+
+.logo-bar h1 {
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .main-nav {
-  margin-top: 0.6rem;
+  margin-top: 0.5rem;
 }
 
 .main-nav a {
@@ -45,7 +47,19 @@ header {
   text-decoration: underline;
 }
 
-/* HERO SECTION */
+/* HAMBURGER BUTTON */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+}
+
+/* HERO */
 .hero {
   position: relative;
   text-align: center;
@@ -212,49 +226,29 @@ footer {
 }
 
 /* MOBILE */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-}
-
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
   .main-nav {
     display: none;
     flex-direction: column;
+    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
     width: 70%;
-    height: 100vh;
-    background-color: rgba(1, 24, 39, 0.95);
-    padding-top: 5rem;
-    text-align: center;
+    height: 100%;
+    background-color: rgba(1, 24, 39, 0.97);
+    padding-top: 6rem;
     gap: 2rem;
-    z-index: 100;
+    z-index: 10;
+    transition: 0.3s ease;
   }
 
   .main-nav.open {
     display: flex;
   }
 
-  .main-nav a {
-    font-size: 1.2rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 0.5rem;
+  .menu-toggle {
+    display: block;
   }
 
   .cards {
